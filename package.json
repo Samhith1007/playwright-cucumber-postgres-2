@@ -1,0 +1,22 @@
+{
+  "name": "playwright-cucumber-e2e-suite",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "npx cucumber-js --require-module ts-node/register --require steps/**/*.ts",
+    "test:smoke": "npx cucumber-js --require-module ts-node/register --require steps/**/*.ts --tags '@smoke'",
+    "test:functional": "npx cucumber-js --require-module ts-node/register --require steps/**/*.ts --tags '@functional'",
+    "test:regression": "npx cucumber-js --require-module ts-node/register --require steps/**/*.ts --tags '@regression'"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^9.0.0",
+    "@playwright/test": "^1.43.1",
+    "dotenv": "^16.0.0",
+    "pg": "^8.7.1",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/pg": "^8.15.4"
+  }
+}
